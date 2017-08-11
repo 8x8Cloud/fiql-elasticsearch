@@ -1,0 +1,8 @@
+{
+  "term" : {
+    "status" : {
+      "value" : "AVAILABLE",
+      "boost" : 1.0
+    }
+  }
+}

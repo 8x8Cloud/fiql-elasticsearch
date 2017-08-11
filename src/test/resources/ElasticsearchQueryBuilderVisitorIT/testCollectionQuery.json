@@ -1,0 +1,25 @@
+{
+  "bool" : {
+    "should" : [
+      {
+        "term" : {
+          "tags" : {
+            "value" : "user:1234",
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "term" : {
+          "tags" : {
+            "value" : "user:1234",
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}

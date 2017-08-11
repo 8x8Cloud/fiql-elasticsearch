@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2017 by 8x8, Inc. All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information
+  ~ of 8x8, Inc. ("Confidential Information"). You shall not
+  ~ disclose such Confidential Information and shall use it only
+  ~ in accordance with the terms of the license agreement you
+  ~ entered into with 8x8, Inc.
+  -->
+
+<suppressions xmlns="https://www.owasp.org/index.php/OWASP_Dependency_Check_Suppression">
+    <!-- This seems to have started popping up despite https://github.com/jeremylong/DependencyCheck/issues/608. Let's silence it for now. -->
+    <suppress>
+        <notes><![CDATA[
+  file name: jna-4.2.2.jar
+  ]]></notes>
+        <sha1>5012450aee579c3118ff09461d5ce210e0cdc2a9</sha1>
+        <cve>CVE-2012-0217</cve>
+    </suppress>
+
+    <!-- The CPE specifies 2.6.0 (NIST/Mitre), and it looks like this was fixed long ago: http://cxf.apache.org/cve-2012-3451.html -->
+    <suppress>
+        <notes><![CDATA[
+   file name: cxf-core-3.1.11.jar
+   ]]></notes>
+        <gav regex="true">^org\.apache\.cxf:cxf-core:.*$</gav>
+        <cve>CVE-2012-5786</cve>
+    </suppress>
+
+    <!-- We're not using the TCP/UDP logging specified in https://nvd.nist.gov/vuln/detail/CVE-2017-5645 -->
+    <suppress>
+        <notes><![CDATA[
+   file name: log4j-api-2.7.jar
+   ]]></notes>
+        <gav regex="true">^org\.apache\.logging\.log4j:log4j-api:.*$</gav>
+        <cve>CVE-2017-5645</cve>
+    </suppress>
+
+    <!-- It looks like CVE-2016-7051 was addressed in 2.8.4:
+         https://groups.google.com/forum/#!searchin/jackson-user/CVE-2016-7051%7Csort:relevance/jackson-user/esVUkLkkD8Y/bV6AhcBDAQAJ.
+     -->
+    <suppress>
+        <notes><![CDATA[
+   file name: jackson-core-2.8.6.jar
+   ]]></notes>
+        <gav regex="true">^com\.fasterxml\.jackson\.core:jackson-core:.*$</gav>
+        <cve>CVE-2016-7051</cve>
+    </suppress>
+</suppressions>

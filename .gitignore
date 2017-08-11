@@ -1,0 +1,21 @@
+# IDEA-related files
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Eclipse shenanigans
+.classpath
+.project
+.settings/
+
+# OSX annoyances
+.DS_Store
+
+# Maven output
+target
+
+# General noise
+*.swp
+*.class
+*.log

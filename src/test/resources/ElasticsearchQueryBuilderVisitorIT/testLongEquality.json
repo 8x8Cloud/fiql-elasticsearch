@@ -1,0 +1,8 @@
+{
+  "term" : {
+    "storedBytes" : {
+      "value" : 5,
+      "boost" : 1.0
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "bool" : {
+    "must" : [
+      {
+        "range" : {
+          "storedBytes" : {
+            "from" : 100,
+            "to" : null,
+            "include_lower" : false,
+            "include_upper" : true,
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "term" : {
+          "storedBytes" : {
+            "value" : 1000,
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}

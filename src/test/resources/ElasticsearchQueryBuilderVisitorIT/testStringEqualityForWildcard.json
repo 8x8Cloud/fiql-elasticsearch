@@ -1,0 +1,8 @@
+{
+  "wildcard" : {
+    "tenantName" : {
+      "wildcard" : "Test*",
+      "boost" : 1.0
+    }
+  }
+}

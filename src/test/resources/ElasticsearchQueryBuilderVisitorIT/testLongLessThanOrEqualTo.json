@@ -1,0 +1,11 @@
+{
+  "range" : {
+    "storedBytes" : {
+      "from" : null,
+      "to" : 3,
+      "include_lower" : true,
+      "include_upper" : true,
+      "boost" : 1.0
+    }
+  }
+}

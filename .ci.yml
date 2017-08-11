@@ -1,0 +1,13 @@
+promote_artifact: maven
+language: java
+version: 1.0.${BUILD_NUMBER}-${GIT_SHORT_COMMIT}
+jdk:
+  - oraclejdk-8
+script:
+  - mvn -B clean install
+docbuild:
+  docdirs:
+    target/apidocs: javadoc
+    target/site/jacoco-integration-test: jacoco-integration-test
+    target/site/jacoco-test: jacoco-test
+    target/dependency-check-report.html: dependency-check-report.html

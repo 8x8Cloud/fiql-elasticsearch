@@ -1,0 +1,8 @@
+{
+  "term" : {
+    "tenantName" : {
+      "value" : "TestTenant",
+      "boost" : 1.0
+    }
+  }
+}

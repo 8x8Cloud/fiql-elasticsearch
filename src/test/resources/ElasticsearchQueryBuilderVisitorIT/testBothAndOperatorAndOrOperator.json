@@ -1,0 +1,42 @@
+{
+  "bool" : {
+    "should" : [
+      {
+        "term" : {
+          "tenantName" : {
+            "value" : "taters",
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "bool" : {
+          "must" : [
+            {
+              "term" : {
+                "containerName" : {
+                  "value" : "delicious",
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "term" : {
+                "tenantName" : {
+                  "value" : "dinner",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
